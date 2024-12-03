@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol Translyatsiyasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">⚽ Futbol LIVE</div>
+    </header>
+    <main>
+        <section class="video-container">
+            <h1>Futbol Translyatsiyasi</h1>
+            <p>Videoni tomosha qilish uchun quyidagi havolani tanlang:</p>
+
+            <!-- Birinchi video -->
+            <div id="video-container" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
+                <iframe id="video-frame" src="https://varlive2.top/stream/26.html" frameborder="0" allowfullscreen
+                    style="width: 100%; height: 450px;">
+                </iframe>
+                <a href="#" id="link-overlay"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background: transparent;">
+                </a>
+            </div>
+
+            <!-- Ikkinchi video -->
+            <div id="video-container" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
+                <iframe id="video-frame" src="https://varlive2.top/stream/27.html" frameborder="0" allowfullscreen
+                    style="width: 100%; height: 450px;">
+                </iframe>
+                <a href="#" id="link-overlay"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background: transparent;">
+                </a>
+            </div>
+
+            <script>
+                // Ko'rinmas qatlamni boshqarish
+                const linkOverlay = document.getElementById('link-overlay');
+                linkOverlay.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const videoFrame = document.getElementById('video-frame');
+                    if (videoFrame.requestFullscreen) {
+                        videoFrame.requestFullscreen();
+                    }
+                });
+            </script>
+        </section>
+
+    </main>
+    <footer>
+        <p>© 2024 Futbol LIVE. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+
+</html>
