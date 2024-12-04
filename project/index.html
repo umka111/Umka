@@ -20,8 +20,8 @@
 
             <!-- Reklama roligi video -->
             <div id="ad-container" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
-                <video id="ad-video" controls autoplay muted style="width: 100%; height: 450px;">
-                    <source src="./rek.mp4" type="video/mp4">
+                <video id="ad-video" controls autoplay style="width: 100%; height: 450px;">
+                    <source src="./rek" type="video/mp4">
                     Sizning brauzeringiz video tagini qo'llab-quvvatlamaydi.
                 </video>
                 <!-- O'tkazib yuborish tugmasi -->
@@ -34,6 +34,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>© 2024 Futbol LIVE. Barcha huquqlar himoyalangan.</p>
     </footer>
@@ -44,6 +45,17 @@
         const adContainer = document.getElementById('ad-container');
         const skipButton = document.getElementById('skip-button');
         const mainVideoContainer = document.getElementById('main-video-container');
+
+        // Reklama pleyerining stilini o'rnatish
+        function styleAdPlayer() {
+            adContainer.style.backgroundColor = '#333'; // Fon rangini o'rnatish
+            adContainer.style.border = '5px solid #d4af37'; // Chegara stili
+            adContainer.style.borderRadius = '10px'; // Chekka yumaloqligi
+            adContainer.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.8)'; // Soyali ko'rinish
+        }
+
+        // Reklama pleyeriga stilni qo'llash
+        styleAdPlayer();
 
         // 15 soniyadan keyin "O'tkazib yuborish" tugmasini ko'rsatish
         setTimeout(() => {
